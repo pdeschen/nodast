@@ -1,0 +1,11 @@
+{
+  "name": "nodast",
+  "description": "Asterisk FastAgi Proxy",
+  "version": "0.0.1",
+  "author": "Pascal Deschenes <pdeschen@rassemblr.com> (http://blog.rassemblr.com)",
+  "keywords": ["build"],
+  "directories": { "lib": "./lib" },
+  "main": "./lib/index",
+  "bin": { "nodast": "./bin/nodast" },
+  "repository" :  { "type" : "git" , "url" : "http://github.com/pdeschen/nodast.git" }
+}
