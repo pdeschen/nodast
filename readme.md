@@ -8,7 +8,8 @@
  Looking more specifically at the agi_request parameter, the AGI URL is then matched against the config route definitions, where route definitions
  values are either static or dynamic. Dynamic values are simply JavaScript closure blocks, with /this/ pointing to a variable context 
  containing all request parameters along with regexp match group items. The dynamic function is simply rewriting the AGI URL, changing
- the destination hostname and port as necessary. The resulting route is NOT re-injected into   
+ the destination hostname and port as necessary. The resulting route is NOT re-injected back into route matching engine for further
+ resolution.   
  
  Once route has been resolved, nodast then look for upstream definitions and replace logical name with upstream equivalent.
  
@@ -66,6 +67,7 @@ The follow list all available context variable for dynamic route definition.
 ## Features
 
   * Basic config definition with location and upstream
+  * Basic command line test mode (nodagi -t 'agi://foobar.com:8080/querystring')
   * Syslog
   * Daemon init mode
 
@@ -78,6 +80,8 @@ Install from npm:
 ## Todo
 
   * Add to npm repository
+  * Add location reinjection?
+  * Add request logging details along with logging level in config.
   * Add load balancing support between upstreams
   * Add failover/backup upstream
   * Add SSL/TLS support between node (asterisk -> node -> ssl -> node -> fastagi server
