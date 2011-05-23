@@ -40,26 +40,26 @@ The follow list all available context variable for dynamic route definition.
  
 ## Sample Configuration
 
- var config = {
-    listen : 9090,
-    upstreams : {
-        test : 'localhost:4573',
-        foobar : 'foobar.com:4573'
-    },
-    routes : {
-        'agi://(.*):([0-9]*)/(.*)' : function() {
-            if (this.$callerid === 'unknown') {
-                return ('agi://foobar/script/' + this.$3);
-            } else {
-                return ('agi://foobar/script/' + this.$3 + '?callerid' + this.$callerid);
-            }
+     var config = {
+        listen : 9090,
+        upstreams : {
+            test : 'localhost:4573',
+            foobar : 'foobar.com:4573'
         },
-        '.*' : function() {
-            return ('agi://test/');
-        },
-        'agi://192.168.129.170:9090/' : 'agi://test/'
-    }
- };
+        routes : {
+            'agi://(.*):([0-9]*)/(.*)' : function() {
+                if (this.$callerid === 'unknown') {
+                    return ('agi://foobar/script/' + this.$3);
+                } else {
+                    return ('agi://foobar/script/' + this.$3 + '?callerid' + this.$callerid);
+                }
+            },
+            '.*' : function() {
+                return ('agi://test/');
+            },
+            'agi://192.168.129.170:9090/' : 'agi://test/'
+        }
+     };
 
  exports.config = config; 
 
