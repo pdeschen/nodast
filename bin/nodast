@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var $nodeagi;
+try {
+    $nodeagi = require('nodeagi');
+}
+catch(exception) {
+    // load in place 
+    if (!$nodeagi) {
+        $nodeagi = require('../lib/index.js');
+    }
+}
+$nodeagi.parse();

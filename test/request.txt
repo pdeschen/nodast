@@ -1,0 +1,21 @@
+agi_network_script: robot?hash=1097957525&callId=5508571880547773492
+agi_request: agi://10.9.8.18:9090/robot?hash=1097957525&callId=5508571880547773492
+agi_channel: SIP/pbx_2-00000890
+agi_language: en
+agi_type: SIP
+agi_uniqueid: 1306070695.16532
+agi_version: 1.6.2.6
+agi_callerid: unknown
+agi_calleridname: unknown
+agi_callingpres: 0
+agi_callingani2: 0
+agi_callington: 0
+agi_callingtns: 0
+agi_dnid: unknown
+agi_rdnis: unknown
+agi_context: default
+agi_extension: 
+agi_priority: 1
+agi_enhanced: 0.0
+agi_accountcode: nuecho
+agi_threadid: -1392870496
