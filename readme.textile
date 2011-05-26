@@ -12,7 +12,7 @@ h2. Context Variables
 
 The following list all available context variables for dynamic route definition.
 
-bq. 
+<pre>
     $network_script
     $request
     $channel
@@ -34,10 +34,11 @@ bq.
     $enhanced
     $accountcode
     $threadid
- 
+</pre>
+
 h2. Sample Configuration
 
-bq. 
+<pre>
 var config = {
     listen : 9090,
     upstreams : {
@@ -59,6 +60,7 @@ var config = {
     }
 };
 exports.config = config; 
+</pre>
 
 h2. Features
 
@@ -71,8 +73,7 @@ h2. Installation
 
 Install from npm:
 
-bq. 
-    $ npm install nodast
+@$ npm install nodast@
 
 h2. Todo
 
