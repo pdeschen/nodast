@@ -65,7 +65,7 @@ exports.config = config;
 h2. Features
 
 * Basic config definition with location and upstream
-* Basic command line test mode (@nodagi -t 'agi://foobar.com:8080/querystring'@)
+* Basic command line test mode (@nodast -t 'agi://foobar.com:8080/querystring'@)
 * Syslog
 * Daemon init mode
 
