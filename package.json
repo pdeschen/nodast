@@ -1,11 +1,45 @@
 {
-  "name": "nodast",
-  "description": "Asterisk FastAgi Proxy",
-  "version": "0.0.1",
-  "author": "Pascal Deschenes <pdeschen@rassemblr.com> (http://blog.rassemblr.com)",
-  "keywords": ["build"],
-  "directories": { "lib": "./lib" },
-  "main": "./lib/index",
-  "bin": { "nodast": "./bin/nodast" },
-  "repository" :  { "type" : "git" , "url" : "http://github.com/pdeschen/nodast.git" }
+    "name": "nodast",
+    "description": "Asterisk FastAgi Proxy",
+    "version": "0.0.1",
+    "author": "Pascal Deschenes <pdeschen@rassemblr.com> (http://blog.rassemblr.com)",
+    "homepage": "http://github.com/pdeschen/nodast",
+    "preferGlobal": true,
+    "keywords": ["telephony", "asterisk", "proxy", "fastagi"],
+    "directories": {
+        "lib": "./lib",
+        "bin": "./bin",
+        "etc": "./etc"
+    },
+    "main": "nodeast",
+    "config": {
+        "location": '/etc/nodast/'
+    },
+    "bin": {
+        "nodast": "./bin/nodast"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/pdeschen/nodast.git"
+    },
+    "scripts": {
+        "install": "./scripts/install.js"
+    },
+    "bugs": {
+        "email": "pdeschen+nodast@gmail.com",
+        "url": "http://github.com/pdeschen/nodast/issues"
+    },
+    "dependencies": {
+        "cli": "1",
+        "ansi-color": "1",
+        "node-syslog": "1"
+    },
+    "engines": {
+        "node": "0.4 || 0.5",
+        "npm": "1"
+    },
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://github.com/pdeschen/nodast/raw/master/LICENSE"
+    }]
 }
