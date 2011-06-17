@@ -1,45 +1,42 @@
 {
-    "name": "nodast",
-    "description": "Asterisk FastAgi Proxy",
-    "version": "0.0.1",
-    "author": "Pascal Deschenes <pdeschen@rassemblr.com> (http://blog.rassemblr.com)",
-    "homepage": "http://github.com/pdeschen/nodast",
-    "preferGlobal": true,
-    "keywords": ["telephony", "asterisk", "proxy", "fastagi"],
-    "directories": {
-        "lib": "./lib",
-        "bin": "./bin",
-        "etc": "./etc"
-    },
-    "main": "nodeast",
-    "config": {
-        "location": '/etc/nodast/'
-    },
-    "bin": {
-        "nodast": "./bin/nodast"
-    },
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/pdeschen/nodast.git"
-    },
-    "scripts": {
-        "install": "./scripts/install.js"
-    },
-    "bugs": {
-        "email": "pdeschen+nodast@gmail.com",
-        "url": "http://github.com/pdeschen/nodast/issues"
-    },
-    "dependencies": {
-        "cli": "1",
-        "ansi-color": "1",
-        "node-syslog": "1"
-    },
-    "engines": {
-        "node": "0.4 || 0.5",
-        "npm": "1"
-    },
-    "licenses": [{
-        "type": "MIT",
-        "url": "http://github.com/pdeschen/nodast/raw/master/LICENSE"
-    }]
+  "author": "Pascal Deschenes <pdeschen@rassemblr.com> (http://blog.rassemblr.com/)",
+  "name": "nodast",
+  "description": "Asterisk FastAgi Proxy",
+  "version": "0.0.1",
+  "homepage": "http://github.com/pdeschen/nodast",
+  "preferGlobal": true,
+  "keywords": ["telephony", "asterisk", "proxy", "fastagi"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pdeschen/nodast.git"
+  },
+  "main": "nodast",
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin",
+    "etc": "./etc"
+  },
+  "config": {
+    "etc": "/etc/nodast/",
+    "initd": "/etc/init.d/"
+  },
+  "bin": {
+    "nodast": "./bin/nodast"
+  },
+  "bugs": {
+    "email": "pdeschen+nodast@gmail.com",
+    "url": "http://github.com/pdeschen/nodast/issues"
+  },
+  "engines": {
+    "node": "v0.4.5"
+  },
+  "dependencies": {
+    "cli": "0.3.x",
+    "daemon": "0.3.x",
+    "ansi-color": "0.2.x",
+    "node-syslog": "1.0.x",
+    "mime": "1.2.x"
+  },
+  "devDependencies": {}
 }
+

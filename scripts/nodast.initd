@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# nodast    This shell script takes care of starting and stopping nodast server.
+#
+# chkconfig: 2345 65 35
+# description: nodast Asterisk FastAgi Proxy Server
+
+nodast --daemon $@
