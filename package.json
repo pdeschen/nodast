@@ -2,7 +2,7 @@
   "author": "Pascal Deschenes <pdeschen@rassemblr.com> (http://blog.rassemblr.com/)",
   "name": "nodast",
   "description": "Asterisk FastAgi Proxy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "http://github.com/pdeschen/nodast",
   "preferGlobal": true,
   "keywords": ["telephony", "asterisk", "proxy", "fastagi"],
@@ -12,9 +12,10 @@
   },
   "main": "nodast",
   "directories": {
-    "lib": "./lib",
-    "bin": "./bin",
-    "etc": "./etc"
+    "lib": "./lib/",
+    "bin": "./bin/",
+    "etc": "./etc/",
+    "scripts" : "./scripts/"
   },
   "config": {
     "etc": "/etc/nodast/",
